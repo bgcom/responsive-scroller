@@ -1,16 +1,14 @@
 # FancyScroll - jQuery Plugin
-http://bgcom.ch/ Copyright (c) 2012 B+G & Partners | created by Kevin Wenger - wenger.kev(at)gmail(dot)com
+http://bgcom.ch/ Copyright (c) 2012 B+G & Partners | created by Kevin Wenger
 
 ## General Notes
 In an effort to move the plugin forward, support for old jQuery version has been dropped.
-
-Your old styles and properties *might not work out of the box*. Some property names have been changed, noted below, as well as namespacing prefixes being applied to all elements. This means that `.flex-direction-nav .next` is now `.flex-direction-nav .flex-next` by default. The namespacing property is exposed, free for you to change.
 
 ## Updates
 Empty
 
 ## Examples
-- [Basic](http://mymetropole.ch/)
+See [demo](https://github.com/bgcom/responsive-scroller/tree/master/demo) for complete example.
 
 ## Properties
 
@@ -40,10 +38,6 @@ Which element you want to active with `activeClass`.*
 #### active: *{new}*
 `active` allow you to active (or not) this functionnality.*
 
-### added: *{new}*
-Empty
-### removed: *{new}*
-Empty
 
 ## Contributors
 - [Kevin Wenger](https://github.com/Sudei) 
