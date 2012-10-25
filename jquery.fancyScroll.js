@@ -8,7 +8,7 @@
  *   http://www.gnu.org/licenses/gpl.html
  *
  * @author Kevin Wenger
- * @version 1.0 (2012-10-05)
+ * @version 1.1 (2012-10-25)
  * Requires 
  *   JQuery 1.7.1 - http://jquery.com/
  *   ScrollTo 1.4.3.1 - http://flesler.blogspot.ch/2007/10/jqueryscrollto.html
@@ -110,6 +110,10 @@
 							var target = event.srcElement || event.target;
 							element.find(context.options.elemActivate).removeClass(context.options.activeClass);
 							addActiveClass($(target).parents(context.options.elemActivate), context);
+							
+							if(typeof context.options.scroll.afterSmoothClick == 'function') {
+								context.options.scroll.afterSmoothClick(target.href.split('#')[1]);
+							} else alert('bad callback afterSmoothClick');
 					}
       });			
 
@@ -157,7 +161,8 @@
 			active: true,
 			offset: 0,
 			axis: 'y',
-			duration: 1000
+			duration: 1000,
+			afterSmoothClick: function(){},  //Callback: function(link's href) - Fires after the smooth scroll is finish
 		},
 		spy:{
 			active: true

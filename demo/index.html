@@ -71,7 +71,10 @@
 					scroll: {
 						active: true,
 						offset: -62,
-						duration: 300
+						duration: 300,
+						afterSmoothClick: function(target){
+							console.log(target);
+						}
 					},
 					spy:{
 						active: true
